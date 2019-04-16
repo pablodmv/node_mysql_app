@@ -21,7 +21,7 @@ DESCRIBE users;
 
 CREATE TABLE links(
     id INT(11) NOT NULL,
-    titulo VARCHAR(150) NOT NULL,
+    title VARCHAR(150) NOT NULL,
     url VARCHAR(255) NOT NULL,
     description TEXT,
     user_id INT(11), 
