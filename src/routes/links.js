@@ -20,10 +20,9 @@ router.post('/add', async (req,res)=>{
     res.send("Correcto");
 });
 
-router.get('/list', async (req, res)=>{
-    const result = await pool.query('SELECT * FROM links');
-    console.log(result);
-    res.send(result);
+router.get('/', async (req, res)=>{
+    const links = await pool.query('SELECT * FROM links');
+    res.render('links/list', { links });
 
 })
 
