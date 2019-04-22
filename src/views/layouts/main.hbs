@@ -22,23 +22,8 @@
 
 <body>
     {{> navigation }}
-    {{#if success}}
-    <div class="container p-4">
-        <div class="row">
-            <div class="col-md-4 mx-auto">
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    {{success}}
-                    <button type="button" class="close " data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+    {{> message }}
 
-
-            </div>
-        </div>
-    </div>
-
-    {{/if}}
     {{{ body }}}
     {{!-- Scripts --}}
     <script src="https://cdn.jsdelivr.net/npm/translate@1/translate.min.js"></script>

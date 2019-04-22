@@ -6,9 +6,11 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const mySQLStore = require('express-mysql-session')
 const { database } = require('./keys');
+const passport = require('passport');
 
 //initializaciones
 const app = express();
+require('./lib/passport');
 
 
 
@@ -38,6 +40,8 @@ app.use(session({
     store:  new mySQLStore(database)
 }));
 app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
 
 
 
